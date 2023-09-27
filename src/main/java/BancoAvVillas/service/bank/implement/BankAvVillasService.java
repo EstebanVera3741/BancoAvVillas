@@ -3,6 +3,7 @@ package BancoAvVillas.service.bank.implement;
 import BancoAvVillas.commons.constans.response.GeneralResponse;
 import BancoAvVillas.commons.constans.response.bank.IBankAvVillasResponse;
 import BancoAvVillas.commons.converter.bank.BankAvVillasConverter;
+import BancoAvVillas.commons.converter.bank.IBankAvVillasMapper;
 import BancoAvVillas.commons.domains.entity.bank.BankAvVillasEntity;
 import BancoAvVillas.commons.domains.responseDTO.GenericResponseDTO;
 import BancoAvVillas.commons.exception.BankAvVillasGeneralException;
@@ -32,7 +33,8 @@ public class BankAvVillasService implements IBankAvVillasService {
             if (!listBankExist.isEmpty()){
                 return ResponseEntity.ok(GenericResponseDTO.builder()
                         .message(IBankAvVillasResponse.BANK_SUCCESS)
-                        .objectResponse(listBankExist.stream().map(bankAvVillasConverter::convertEntityToDTO)
+                        .objectResponse(listBankExist.stream()
+                                .map(IBankAvVillasMapper.INSTANCE::convertEntityToDTO)
                                 .collect(Collectors.toList()))
                         .statusCode(HttpStatus.OK.value())
                         .build());
