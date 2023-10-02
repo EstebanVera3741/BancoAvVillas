@@ -19,13 +19,14 @@ CREATE TABLE member_av_villas (
     member_av_villas_phone_number VARCHAR(20),
     member_av_villas_address VARCHAR(150),
     member_av_villas_type_sex VARCHAR(20),
+	member_av_villas_status VARCHAR(20),
     member_av_villas_age INT,
     member_av_villas_date_membership DATE,
     bank_av_villas_swift VARCHAR(10),
     FOREIGN KEY (bank_av_villas_swift) REFERENCES bank_av_villas (bank_av_villas_swift)
 );
 
-INSERT INTO bank_av_villas (bank_av_villas_swift, bank_av_villas_name,
-            bank_av_villas_type, bank_av_villas_id_fiscal, bank_av_villas_contact, bank_av_villas_service)
+INSERT INTO bank_av_villas (bank_av_villas_swift, bank_av_villas_name, bank_av_villas_type, bank_av_villas_id_fiscal, bank_av_villas_contact, bank_av_villas_service)
 VALUES
     ('CAGRCOBB', 'Banco Av Villas', 'Caja de Ahorros', '1110500400', '+57 601 4441777', 'Quieres más rentabilidad Abre un CDT');
+
