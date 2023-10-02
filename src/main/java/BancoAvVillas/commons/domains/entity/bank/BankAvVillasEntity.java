@@ -1,7 +1,11 @@
 package BancoAvVillas.commons.domains.entity.bank;
 
+import BancoAvVillas.commons.domains.entity.member.MemberAvVillasEntity;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.*;
+
+import java.util.List;
 
 @Builder(builderMethodName = "newInstance")
 @NoArgsConstructor
@@ -30,4 +34,8 @@ public class BankAvVillasEntity {
 
     @Column(name = "bank_av_villas_service")
     private String bankAvVillasService;
+
+    @OneToMany(mappedBy = "BankAvVillasEntity")
+    @JsonIgnore
+    private List<MemberAvVillasEntity> listMemberEntity;
 }

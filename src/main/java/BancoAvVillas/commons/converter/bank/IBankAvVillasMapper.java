@@ -10,4 +10,5 @@ public interface IBankAvVillasMapper {
     IBankAvVillasMapper INSTANCE = Mappers.getMapper( IBankAvVillasMapper.class );
 
     BankAvVillasDTO convertEntityToDTO(BankAvVillasEntity bankAvVillasEntity);
+    BankAvVillasEntity convertDTOToEntity(BankAvVillasDTO bankAvVillasDTO);
 }

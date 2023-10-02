@@ -1,0 +1,27 @@
+_____________   Json Read Information Bank Av Villas
+______________________________________________________________________________________________________________________
+{
+    "bankAvVillasCodeSwift": "CAGRCOBB",
+    "bankAvVillasName": "Banco Av Villas",
+    "bankAvVillasType": "Caja de Ahorros",
+    "bankAvVillasIdFiscal": "1110500400",
+    "bankAvVillasContact": "+57 601 4441777",
+    "bankAvVillasService": "Quieres más rentabilidad Abre un CDT"
+}
+
+_____________   Json Create Member Av Villas
+______________________________________________________________________________________________________________________
+{
+  "memberAvVillasIdentification": "1110500500",
+  "memberAvVillasName": "Diego Esteban Vera",
+  "memberAvVillasDateBirth": "1994-01-03",
+  "memberAvVillasEmail": "estebanvera3741@gmail.com",
+  "memberAvVillasPhoneNumber": "3103302209",
+  "memberAvVillasAddress": "Cra 3 No. 32-61 Barrio Macarena",
+  "memberAvVillasTypeSex": "Masculino",
+  "memberAvVillasStatus": "Afiliado",
+  "memberAvVillasDateMembership": "2023-10-01",
+  "bankAvVillasDTO": {
+    "bankAvVillasCodeSwift": "CAGRCOBB"
+  }
+}
